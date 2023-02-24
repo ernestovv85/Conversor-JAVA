@@ -39,6 +39,10 @@ public class MenuInicial extends JFrame implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent event) {
 		String select = (String) selector.getSelectedItem();
+		if(select == null){
+			JOptionPane.showMessageDialog(null, "Selecciona una opción de conversión");
+			return;
+		}
 		if(select == "Divisas"){
 			Divisas ventanaDivisas = new Divisas();
 			ventanaDivisas.setVisible(true);
